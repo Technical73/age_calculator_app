@@ -134,9 +134,9 @@ const MainComponent = () => {
   return (
     <>
       {/* Main Container Starts from here */}
-      <div className="flex justify-center items-center font-customFonts min-w-full px-4 md:px-0  min-h-screen bg-primaryBg">
+      <div className="flex justify-center items-center font-customFonts w-screen px-4 md:px-0  h-screen   bg-primaryBg">
         {/* Box Container Starts from here*/}
-        <div className="lg:w-lgBoxContainer  bg-boxBg  md:w-mdBoxContainer rounded-customBoxRadios md:py-5 md:px-5 px-3 py-3">
+        <div className="lg:w-lgBoxContainer bg-boxBg    md:min-w-mdBoxContainer rounded-customBoxRadios md:py-8 md:px-8 px-3 py-3">
           {/* Form Starts from here */}
           <form onSubmit={handleSubmit}>
             {/* Input Group Start from here*/}
@@ -227,7 +227,7 @@ const MainComponent = () => {
             {/* Input Group End here */}
 
             {/* Submit Button Starts from here */}
-            <div className="lg:text-right md:text-right text-center md:my-5 my-5 ">
+            <div className="lg:text-right md:text-center text-center md:my-5 my-5 ">
               <button type="submit" className="cursor-pointer">
                 <img
                   src={image}

@@ -7,8 +7,8 @@ export default {
         customFonts: ["Poppins"],
       },
       width: {
-        lgBoxContainer: "43%",
-        mdBoxContainer: "55%",
+        lgBoxContainer: "42%",
+        mdBoxContainer: "42%",
       },
       backgroundColor: {
         boxBg: "hsl(0, 0%, 100%)",
