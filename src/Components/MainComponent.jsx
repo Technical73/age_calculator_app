@@ -227,7 +227,7 @@ const MainComponent = () => {
             {/* Input Group End here */}
 
             {/* Submit Button Starts from here */}
-            <div className="lg:text-right md:text-center text-center md:my-0 my-6 ">
+            <div className="lg:text-right md:text-center text-center md:my-3 my-6 ">
               <button type="submit" className="cursor-pointer">
                 <img
                   src={image}
