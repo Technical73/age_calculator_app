@@ -134,13 +134,13 @@ const MainComponent = () => {
   return (
     <>
       {/* Main Container Starts from here */}
-      <div className="flex justify-center items-center font-customFonts min-w-screen px-4 md:px-0  min-h-screen   bg-primaryBg">
+      <div className="flex justify-center items-center font-customFonts w-screen px-5  min-h-screen   bg-primaryBg">
         {/* Box Container Starts from here*/}
-        <div className="lg:w-lgBoxContainer bg-boxBg    md:min-w-mdBoxContainer rounded-customBoxRadios md:py-11 md:px-11 px-3 py-3">
+        <div className=" md:w-lgBoxContainer bg-boxBg rounded-customBoxRadios md:py-11 md:px-11  px-5 py-5">
           {/* Form Starts from here */}
           <form onSubmit={handleSubmit}>
             {/* Input Group Start from here*/}
-            <div className="flex flex-row justify-start gap-5 align-baseline md:mb-3 mb-4">
+            <div className="flex flex-row justify-start gap-5  align-baseline md:mb-4 mb-5">
               {/* Day Input Starts from here */}
               <div>
                 <label
@@ -158,7 +158,7 @@ const MainComponent = () => {
                   name="day"
                   onChange={handleChange}
                   ref={dayRef}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2  font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2  font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 xs:w-24 w-20 ${
                     errors.day ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -185,7 +185,7 @@ const MainComponent = () => {
                   onChange={handleChange}
                   placeholder="MM"
                   ref={monthRef}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 xs:w-24 w-20 ${
                     errors.month ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -213,7 +213,7 @@ const MainComponent = () => {
                   name="year"
                   ref={yearRef}
                   onChange={handleChange}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32  w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32  xs:w-24 w-20 ${
                     errors.year ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -227,13 +227,17 @@ const MainComponent = () => {
             {/* Input Group End here */}
 
             {/* Submit Button Starts from here */}
-            <div className="lg:text-right md:text-center text-center md:mb-3 mb-4 ">
-              <button type="submit" className="cursor-pointer">
-                <img
-                  src={image}
-                  className=" w-16 h-16  rounded-customButtonRadius p-5 bg-customButtonBg hover:bg-black hover:text-white"
-                />
-              </button>
+            <div className="lg:text-right md:text-center text-center mb-5 md:mb-4">
+              <div className="flex items-center">
+                <div className="flex-grow border-t-2 border-customButtonBg"></div>
+                <button type="submit" className="cursor-pointer">
+                  <img
+                    src={image}
+                    className="w-customButtonWidth h-customButtonHeight rounded-customButtonRadius p-5 bg-customButtonBg hover:bg-black hover:text-white"
+                  />
+                </button>
+                <div className="flex-grow block md:hidden border-t-2 border-customButtonBg"></div>
+              </div>
             </div>
 
             {/* Submit Button Ends here */}
@@ -242,24 +246,42 @@ const MainComponent = () => {
           {/* Group of Results Starts from here */}
           <div className="flex flex-col justify-center items-start">
             <div>
-              <h1 className="font-customWeight text-customBigHeading italic">
-                <span className="font-customWeight text-customBigHeading text-customTextHeadingColor mr-3">
+              <h1
+                style={{ fontWeight: 1000 }}
+                className=" text-customSmSize md:text-customBigHeading italic"
+              >
+                <span
+                  className=" text-customSmSize md:text-customBigHeading text-customTextHeadingColor mr-3"
+                  style={{ fontWeight: 1000 }}
+                >
                   {data.age !== undefined ? data.age : "--"}
                 </span>
                 years
               </h1>
             </div>
             <div>
-              <h1 className="font-customWeight text-customBigHeading italic">
-                <span className="font-customWeight text-customBigHeading text-customTextHeadingColor mr-3">
+              <h1
+                className=" text-customSmSize md:text-customBigHeading italic"
+                style={{ fontWeight: 1000 }}
+              >
+                <span
+                  className=" text-customSmSize md:text-customBigHeading text-customTextHeadingColor mr-3"
+                  style={{ fontWeight: 1000 }}
+                >
                   {data.age !== undefined ? data.age * 12 : "--"}
                 </span>
                 months
               </h1>
             </div>
             <div>
-              <h1 className="font-customWeight text-customBigHeading italic">
-                <span className="font-customWeight text-customBigHeading text-customTextHeadingColor mr-3">
+              <h1
+                className=" text-customSmSize md:text-customBigHeading italic"
+                style={{ fontWeight: 1000 }}
+              >
+                <span
+                  className=" text-customSmSize md:text-customBigHeading text-customTextHeadingColor mr-3"
+                  style={{ fontWeight: 1000 }}
+                >
                   {data.age !== undefined ? data.age * 365 : "--"}
                 </span>
                 days

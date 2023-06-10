@@ -7,8 +7,11 @@ export default {
         customFonts: ["Poppins"],
       },
       width: {
-        lgBoxContainer: "660px",
-        mdBoxContainer: "1440px",
+        lgBoxContainer: "670px",
+        customButtonWidth: "72px",
+      },
+      height: {
+        customButtonHeight: "72px",
       },
       backgroundColor: {
         boxBg: "hsl(0, 0%, 100%)",
@@ -24,15 +27,13 @@ export default {
         defaultFontSmall: "22px",
         customLabelSubSize: "11px",
         customErrorSize: "10px",
-        customBigHeading: "50px",
+        customBigHeading: "60px",
+        customSmSize: "35px",
       },
       colors: {
         subBg: "hsl(0, 0%, 94%)",
         customTextHeadingColor: "hsl(259, 100%, 65%)",
         customErrorColor: "hsl(0, 100%, 67%)",
-      },
-      fontWeight: {
-        customWeight: 1000,
       },
     },
   },
