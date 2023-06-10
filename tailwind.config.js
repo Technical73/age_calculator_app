@@ -7,8 +7,8 @@ export default {
         customFonts: ["Poppins"],
       },
       width: {
-        lgBoxContainer: "42%",
-        mdBoxContainer: "42%",
+        lgBoxContainer: "660px",
+        mdBoxContainer: "1440px",
       },
       backgroundColor: {
         boxBg: "hsl(0, 0%, 100%)",
@@ -32,7 +32,7 @@ export default {
         customErrorColor: "hsl(0, 100%, 67%)",
       },
       fontWeight: {
-        customWeight: 900,
+        customWeight: 1000,
       },
     },
   },

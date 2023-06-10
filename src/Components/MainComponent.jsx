@@ -134,15 +134,15 @@ const MainComponent = () => {
   return (
     <>
       {/* Main Container Starts from here */}
-      <div className="flex justify-center items-center font-customFonts w-screen px-4 md:px-0  h-screen   bg-primaryBg">
+      <div className="flex justify-center items-center font-customFonts min-w-screen px-4 md:px-0  min-h-screen   bg-primaryBg">
         {/* Box Container Starts from here*/}
-        <div className="lg:w-lgBoxContainer bg-boxBg    md:min-w-mdBoxContainer rounded-customBoxRadios md:py-8 md:px-8 px-3 py-3">
+        <div className="lg:w-lgBoxContainer bg-boxBg    md:min-w-mdBoxContainer rounded-customBoxRadios md:py-11 md:px-11 px-3 py-3">
           {/* Form Starts from here */}
           <form onSubmit={handleSubmit}>
             {/* Input Group Start from here*/}
-            <div className="flex flex-row justify-start  align-baseline">
+            <div className="flex flex-row justify-start gap-5 align-baseline">
               {/* Day Input Starts from here */}
-              <div className=" lg:mr-6 md:mr-6 mr-3">
+              <div>
                 <label
                   htmlFor="day"
                   className={`text-customLabelSubSize mb-2  font-bold ${
@@ -158,7 +158,7 @@ const MainComponent = () => {
                   name="day"
                   onChange={handleChange}
                   ref={dayRef}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2  font-bold focus:outline-none focus:shadow-outline leading-tight md:w-28 w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2  font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 w-24 ${
                     errors.day ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -169,7 +169,7 @@ const MainComponent = () => {
               {/* Day Input Ends here */}
 
               {/* Month Input Starts from here */}
-              <div className=" lg:mr-6 md:mr-6 mr-3">
+              <div>
                 <label
                   htmlFor="month"
                   className={`text-customLabelSubSize  mb-2 font-bold ${
@@ -185,7 +185,7 @@ const MainComponent = () => {
                   onChange={handleChange}
                   placeholder="MM"
                   ref={monthRef}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-28 w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32 w-24 ${
                     errors.month ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -213,7 +213,7 @@ const MainComponent = () => {
                   name="year"
                   ref={yearRef}
                   onChange={handleChange}
-                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-28  w-24 ${
+                  className={`shadow md:text-mdCustomInputsSize text-defaultFontSmall px-2 py-2 font-bold focus:outline-none focus:shadow-outline leading-tight md:w-32  w-24 ${
                     errors.year ? "border border-customErrorColor" : ""
                   }`}
                 />
@@ -227,11 +227,11 @@ const MainComponent = () => {
             {/* Input Group End here */}
 
             {/* Submit Button Starts from here */}
-            <div className="lg:text-right md:text-center text-center md:my-5 my-5 ">
+            <div className="lg:text-right md:text-center text-center md:my-0 my-6 ">
               <button type="submit" className="cursor-pointer">
                 <img
                   src={image}
-                  className="w-16 h-16 rounded-customButtonRadius p-5 bg-customButtonBg hover:bg-black hover:text-white"
+                  className=" w-16 h-16  rounded-customButtonRadius p-5 bg-customButtonBg hover:bg-black hover:text-white"
                 />
               </button>
             </div>
@@ -240,7 +240,7 @@ const MainComponent = () => {
           </form>
           {/* Form Ends here */}
           {/* Group of Results Starts from here */}
-          <div className="flex flex-col justify-start items-start">
+          <div className="flex flex-col justify-center items-start">
             <div>
               <h1 className="font-customWeight text-customBigHeading italic">
                 <span className="font-customWeight text-customBigHeading text-customTextHeadingColor mr-3">
