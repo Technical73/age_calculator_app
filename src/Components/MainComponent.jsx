@@ -140,7 +140,7 @@ const MainComponent = () => {
           {/* Form Starts from here */}
           <form onSubmit={handleSubmit}>
             {/* Input Group Start from here*/}
-            <div className="flex flex-row justify-start gap-5 align-baseline">
+            <div className="flex flex-row justify-start gap-5 align-baseline md:mb-3 mb-4">
               {/* Day Input Starts from here */}
               <div>
                 <label
@@ -227,7 +227,7 @@ const MainComponent = () => {
             {/* Input Group End here */}
 
             {/* Submit Button Starts from here */}
-            <div className="lg:text-right md:text-center text-center md:my-3 my-6 ">
+            <div className="lg:text-right md:text-center text-center md:mb-3 mb-4 ">
               <button type="submit" className="cursor-pointer">
                 <img
                   src={image}
